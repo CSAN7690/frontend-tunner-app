@@ -1,21 +1,19 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
       <Router>
-        <Navbar />
-        <main>
-          <Routes>
-
-          </Routes>
-        </main>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
       </Router>
     </div>
-  )
+  );
 }
 
 export default App
