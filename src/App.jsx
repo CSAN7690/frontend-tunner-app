@@ -7,6 +7,9 @@ import Show from "./pages/Show";
 import Edit from "./pages/Edit";
 import New from "./pages/New"
 
+// BONUS
+import FourOFour from "./pages/FourOFour"
+
 function App() {
   return (
     <div className="App">
@@ -14,11 +17,13 @@ function App() {
         <NavBar />
         <main>
           <Routes>
+
             <Route path="/" element={<Home />} />
             <Route path="/songs" element={<Index />} />
             <Route path="/songs/:id" element={<Show />} />
             <Route path="/songs/:id/edit" element={<Edit />} />
             <Route path="/songs/new" element={<New />} />
+            <Route path="*" element={<FourOFour />} />
 
           </Routes>
         </main>
